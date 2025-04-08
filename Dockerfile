@@ -5,6 +5,7 @@
 # -- Stage 1 -- #
 # Compile the app.
 FROM --platform=linux/amd64 golang:1.12-alpine as builder
+ENV TZ="America/Denver"
 WORKDIR /app
 # The build context is set to the directory where the repo is cloned.
 # This will copy all files in the repo to /app inside the container.
